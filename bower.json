@@ -1,0 +1,20 @@
+{
+  "name": "reactQa",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "liuqiuchen <2016968116@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
