@@ -3,14 +3,17 @@ const QuestionItem = require('./QuestionItem.js');
 
 module.exports = React.createClass({
     render: function () {
-        let questions = this.props.questions;
+        let _this = this;
+        let questions = _this.props.questions;
         //console.log(Array.isArray(questions));
         if(!Array.isArray(questions))  throw new Error('this.props.questions问题必须是数组');
         let questionComps = questions.map(function (qst) {
             return <QuestionItem key={qst.key}
-                          title={qst.title}
-                          description={qst.description}
-                          voteCount={qst.voteCount}
+                                 questionKey={qst.key}
+                                 title={qst.title}
+                                 description={qst.description}
+                                 voteCount={qst.voteCount}
+                                 onVote={_this.props.onVote}
                     />;
         });
 
